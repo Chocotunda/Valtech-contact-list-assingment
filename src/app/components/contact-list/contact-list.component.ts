@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigInterface } from '../../interfaces/config.interface';
 import { UserInterface } from '../../interfaces/user.interface';
 import { ContactsService } from '../../services/contacts.service';
+import config from '../../../../configuration.json';
+
 
 @Component({
   selector: 'app-contact-list',
@@ -9,7 +12,7 @@ import { ContactsService } from '../../services/contacts.service';
 })
 export class ContactListComponent implements OnInit {
     public contacts: UserInterface['results'] = [];
-    public data: any = [];
+    public tabs: ConfigInterface['tabs'] = config.tabs;
 
     constructor(private contactsService: ContactsService) {}
 
@@ -17,6 +20,5 @@ export class ContactListComponent implements OnInit {
         this.contactsService.getContacts().subscribe((contacts: UserInterface) => {
             this.contacts = contacts.results;
         });
-
     }
 }

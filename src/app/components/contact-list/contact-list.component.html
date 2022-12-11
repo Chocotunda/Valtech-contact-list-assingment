@@ -13,6 +13,14 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">All</a>
+                    </li>
+                    <li class="nav-item" *ngFor="let tab of tabs">
+                        <a class="nav-link active" aria-current="page" href="#">{{tab}}</a>
+                    </li>
+                </ul>
                 <table class="table table-striped table-hover">
                     <thead class="bg-secondary text-white">
                     <tr>
@@ -35,6 +43,6 @@
     </div>
 </section>
 
-<pre>
-    {{contacts | json}}
-</pre>
+<!--<pre>-->
+<!--    {{contacts | json}}-->
+<!--</pre>-->
