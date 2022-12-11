@@ -1,0 +1,33 @@
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p class="h3">Contact list</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam atque consectetur corporis deserunt doloremque dolores earum error, harum illum inventore natus nisi obcaecati placeat quam quod suscipit vel voluptates.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">All</a>
+                    </li>
+                    <li class="nav-item" *ngFor="let tab of tabs">
+                        <a class="nav-link active" aria-current="page" href="#">{{tab}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <app-contact-list (sendContact)="selectedContact=$event"></app-contact-list>
+            </div>
+            <div class="col-md-3">
+                <app-contact-card [selectedContact]="selectedContact"></app-contact-card>
+            </div>
+        </div>
+    </div>
+</section>
