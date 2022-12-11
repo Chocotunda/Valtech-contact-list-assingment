@@ -9,4 +9,7 @@ import { ResultsEntity } from '../../interfaces/user.interface';
 export class ContactCardComponent {
     @Input() selectedContact: ResultsEntity = {} as ResultsEntity;
 
+    public isNotEmpty(): boolean {
+        return Object.keys(this.selectedContact).length > 0;
+    }
 }

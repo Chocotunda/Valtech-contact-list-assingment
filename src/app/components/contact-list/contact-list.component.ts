@@ -36,7 +36,6 @@ export class ContactListComponent implements OnInit {
     // }
 
     public onSelectContact(contact: ResultsEntity): void {
-        console.log(contact);
         this.sendContact.emit(contact);
     }
 }
