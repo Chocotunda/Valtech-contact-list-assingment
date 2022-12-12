@@ -19,16 +19,16 @@ export class ContactListComponent implements OnInit {
     ) {}
 
     public ngOnInit(): void {
-        if (this.contacts?.length === 0) {
-            this.subscription.add(
-                this.contactsService.getContacts().subscribe((contacts: UserInterface) => {
-                        this.contacts = contacts.results;
-                    }, (error) => {
-                        this.errorMessage = error;
-                    },
-                )
-            );
-        }
+        // if (this.contacts?.length === 0) {
+        //     this.subscription.add(
+        //         this.contactsService.getContacts().subscribe((contacts: UserInterface) => {
+        //                 this.contacts = contacts.results;
+        //             }, (error) => {
+        //                 this.errorMessage = error;
+        //             },
+        //         )
+        //     );
+        // }
     }
     //
     // public ngOnDestroy(): void {
