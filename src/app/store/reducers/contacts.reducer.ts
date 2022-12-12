@@ -4,18 +4,18 @@ import * as contactsActions from '../actions/contacts.actions';
 import * as fromRoot from '../interfaces/app.state';
 
 export interface ContactState {
-    contacts: UserInterface[];
+    contacts: UserInterface;
     loading: boolean;
     loaded: boolean;
     error: string;
 }
 
-export interface AppStateInterface extends fromRoot.AppState {
+export interface AppState extends fromRoot.AppState {
     contacts: ContactState;
 }
 
 export const initialState: ContactState = {
-    contacts: [],
+    contacts: {} as UserInterface,
     loading: false,
     loaded: false,
     error: '',
@@ -54,21 +54,26 @@ export function contactsReducer(
     }
 }
 
-const getCustomerFeatureState = createFeatureSelector<ContactState>(
+const getContactFeatureState = createFeatureSelector<ContactState>(
     'contacts'
 );
 
-export const getCustomersLoading = createSelector(
-    getCustomerFeatureState,
+export const getContacts = createSelector(
+    getContactFeatureState,
+    (state: ContactState) => state.contacts
+);
+
+export const getContactsLoading = createSelector(
+    getContactFeatureState,
     (state: ContactState) => state.loading
 );
 
-export const getCustomersLoaded = createSelector(
-    getCustomerFeatureState,
+export const getContactsLoaded = createSelector(
+    getContactFeatureState,
     (state: ContactState) => state.loaded
 );
 
 export const getError = createSelector(
-    getCustomerFeatureState,
+    getContactFeatureState,
     (state: ContactState) => state.error
 );

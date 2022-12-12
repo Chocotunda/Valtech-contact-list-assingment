@@ -13,7 +13,7 @@ export class LoadContacts implements Action {
 
 export class LoadContactsSuccess implements Action {
     readonly type = ContactsActions.LOAD_CONTACTS_SUCCESS;
-    constructor(public payload: UserInterface[]) {}
+    constructor(public payload: UserInterface) {}
 }
 
 export class LoadContactsFail implements Action {

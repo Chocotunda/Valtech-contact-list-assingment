@@ -22,7 +22,7 @@ export class ContactsEffect {
             mergeMap(() =>
                 this.contactsService.getContacts().pipe(
                     map(
-                        (contacts: UserInterface[]) =>
+                        (contacts: UserInterface) =>
                             new contactsActions.LoadContactsSuccess(contacts)
                     ),
                     catchError((error) =>

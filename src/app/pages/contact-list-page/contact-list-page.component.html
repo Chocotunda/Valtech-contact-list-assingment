@@ -9,7 +9,6 @@
     </div>
 </section>
 <pre>
-    {{contacts | json}}
 </pre>
 <section class="mt-3">
     <div class="container">
@@ -25,7 +24,7 @@
                 </ul>
             </div>
             <div class="col-md-9">
-                <app-contact-list (sendContact)="selectedContact=$event"></app-contact-list>
+                <app-contact-list [contacts]="contacts$ | async" (sendContact)="selectedContact=$event"></app-contact-list>
             </div>
             <div class="col-md-3">
                 <app-contact-card [selectedContact]="selectedContact"></app-contact-card>

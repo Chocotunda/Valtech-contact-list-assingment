@@ -14,10 +14,10 @@ export class ContactsService {
         private http: HttpClient,
     ) {}
 
-    public getContacts(numberUsers: number = this.configData.numberCards): Observable<UserInterface[]> {
+    public getContacts(numberUsers: number = this.configData.numberCards): Observable<UserInterface> {
         const dataUrl = `${this.configData['userUrl']}/?results=${numberUsers}`;
 
-        return this.http.get<UserInterface[]>(dataUrl).pipe(
+        return this.http.get<UserInterface>(dataUrl).pipe(
             catchError(this.handleError),
         );
     }
