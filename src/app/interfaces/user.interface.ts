@@ -1,8 +1,8 @@
 export interface UserInterface {
-    results?: (ResultsEntity)[] | null;
+    results?: (ContactEntity)[] | null;
     info: Info;
 }
-export interface ResultsEntity {
+export interface ContactEntity {
     gender: string;
     name: Name;
     location: Location;

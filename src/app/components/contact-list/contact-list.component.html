@@ -11,7 +11,7 @@
         <th scope="col">Email</th>
     </thead>
     <tbody>
-    <tr class="contact-list" *ngFor="let contact of contacts.results; index as i" (click)="onSelectContact(contact)">
+    <tr class="contact-list" *ngFor="let contact of contactList; index as i" (click)="onSelectContact(contact)">
         <td>{{i + 1}}</td>
         <td>{{contact.name.first}} {{contact.name.last}}</td>
         <td>{{contact.phone}}</td>

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ResultsEntity } from '../../interfaces/user.interface';
+import { ContactEntity } from '../../interfaces/user.interface';
 
 @Component({
   selector: 'app-contact-card',
@@ -7,7 +7,7 @@ import { ResultsEntity } from '../../interfaces/user.interface';
   styleUrls: ['./contact-card.component.scss']
 })
 export class ContactCardComponent {
-    @Input() selectedContact: ResultsEntity = {} as ResultsEntity;
+    @Input() selectedContact: ContactEntity = {} as ContactEntity;
 
     public isNotEmpty(): boolean {
         return Object.keys(this.selectedContact).length > 0;

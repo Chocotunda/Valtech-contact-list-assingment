@@ -16,15 +16,15 @@
             <div class="col-12">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">All</a>
+                        <a class="nav-link active" aria-current="page" href="#" (click)="onSelectTab($event)">All</a>
                     </li>
                     <li class="nav-item" *ngFor="let tab of tabs">
-                        <a class="nav-link active" aria-current="page" href="#">{{tab}}</a>
+                        <a class="nav-link active" aria-current="page" href="#" (click)="onSelectTab($event)">{{tab | uppercase}}</a>
                     </li>
                 </ul>
             </div>
             <div class="col-md-9">
-                <app-contact-list [contacts]="contacts$ | async" (sendContact)="selectedContact=$event"></app-contact-list>
+                <app-contact-list [contacts]="contacts$ | async" (sendContact)="selectedContact=$event" [selectedTab]="selectedTab"></app-contact-list>
             </div>
             <div class="col-md-3">
                 <app-contact-card [selectedContact]="selectedContact"></app-contact-card>
