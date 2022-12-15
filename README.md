@@ -18,7 +18,7 @@ This project is for Valtech. Valtech proposed to make this app using Angular.
 * The contacts of your application have to be retrieved from the http://randomuser.me API.
 * The app should be usable on both small and large screens
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3. And makes use of NG Bootstrap
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3. And makes use of [NG Bootstrap](https://ng-bootstrap.github.io/#/home)
 
 ## Development server
 
