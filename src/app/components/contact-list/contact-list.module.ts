@@ -1,4 +1,4 @@
-import { JsonPipe, NgForOf, NgIf } from '@angular/common';
+import { NgForOf, NgIf, UpperCasePipe } from '@angular/common';
 import { NgModule } from '@angular/core';
 
 import { ContactListComponent } from './contact-list.component';
@@ -7,7 +7,7 @@ import { ContactListComponent } from './contact-list.component';
     imports: [
         NgForOf,
         NgIf,
-        JsonPipe,
+        UpperCasePipe,
     ],
     exports: [ContactListComponent],
     declarations: [ContactListComponent],

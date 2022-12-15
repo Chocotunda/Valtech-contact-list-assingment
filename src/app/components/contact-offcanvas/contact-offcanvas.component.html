@@ -1,0 +1,76 @@
+<!--<ng-template #content let-offcanvas>-->
+<!--    <div class="offcanvas-header">-->
+<!--        <h4 class="offcanvas-title" id="offcanvas-basic-title">Profile update</h4>-->
+<!--        <button type="button" class="btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"></button>-->
+<!--    </div>-->
+<!--    <div class="offcanvas-body">-->
+<!--        <div class="card">-->
+<!--            <img [src]="selectedContact.picture.large"-->
+<!--                 alt="{{selectedContact.name.first}} {{selectedContact.name.last}}">-->
+<!--            <div class="card-body">-->
+<!--                <ul class="list-group list-group-flush">-->
+<!--                    <li class="list-group-item">-->
+<!--                        <p class="card-text">{{selectedContact.email}}</p>-->
+<!--                    </li>-->
+<!--                    <li class="list-group-item">-->
+<!--                        <p class="card-text">{{selectedContact.phone}}</p>-->
+<!--                    </li>-->
+<!--                    <li class="list-group-item">-->
+<!--                        <p class="card-text">{{selectedContact.location.street.number}} {{selectedContact.location.street.name}}</p>-->
+<!--                    </li>-->
+<!--                    <li class="list-group-item">-->
+<!--                        <p class="card-text">{{selectedContact.location.city}}-->
+<!--                            , {{selectedContact.location.state}} {{selectedContact.location.postcode}}</p>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</ng-template>-->
+
+<!--<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo offcanvas</button>-->
+
+<div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvas-basic-title">
+        {{ selectedContact.name.first }} {{ selectedContact.name.last }}
+    </h4>
+    <button
+        type="button"
+        class="btn-close text-reset"
+        aria-label="Close"
+        (click)="activeOffcanvas.dismiss('Cross click')"
+    ></button>
+</div>
+<div class="offcanvas-body">
+    <div class="card">
+        <img
+            [src]="selectedContact.picture.large"
+            alt="{{ selectedContact.name.first }} {{
+                selectedContact.name.last
+            }}"
+        />
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <p class="card-text">{{ selectedContact.email }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p class="card-text">{{ selectedContact.phone }}</p>
+                </li>
+                <li class="list-group-item">
+                    <p class="card-text">
+                        {{ selectedContact.location.street.number }}
+                        {{ selectedContact.location.street.name }}
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <p class="card-text">
+                        {{ selectedContact.location.city }} ,
+                        {{ selectedContact.location.state }}
+                        {{ selectedContact.location.postcode }}
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

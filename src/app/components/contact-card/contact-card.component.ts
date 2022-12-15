@@ -12,4 +12,9 @@ export class ContactCardComponent {
     public isNotEmpty(): boolean {
         return Object.keys(this.selectedContact).length > 0;
     }
+
+    public onClose(event: any): void {
+        event.preventDefault();
+        this.selectedContact = {} as ContactEntity;
+    }
 }

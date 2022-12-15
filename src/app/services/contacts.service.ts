@@ -15,7 +15,7 @@ export class ContactsService {
     ) {}
 
     public getContacts(numberUsers: number = this.configData.numberCards): Observable<UserInterface> {
-        const dataUrl = `${this.configData['userUrl']}/?results=${numberUsers}`;
+        const dataUrl = `${this.configData['userUrl']}/?nat=us,dk,fr,gb&results=${numberUsers}`;
 
         return this.http.get<UserInterface>(dataUrl).pipe(
             catchError(this.handleError),

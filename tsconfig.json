@@ -21,6 +21,9 @@
         "useDefineForClassFields": false,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "types": [
+          "@angular/localize"
+        ],
         "lib": [
             "ES2022",
             "dom"

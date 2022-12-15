@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Store, select } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
+import { DeviceDetectorService } from 'ngx-device-detector';
 import { Observable } from 'rxjs';
-import config from '../../../../configuration.json';
-import { ConfigInterface } from '../../interfaces/config.interface';
-import { UserInterface, ContactEntity } from '../../interfaces/user.interface';
+import { ContactEntity, UserInterface } from '../../interfaces/user.interface';
 import * as contactsActions from '../../store/actions/contacts.actions';
 import * as fromContacts from '../../store/reducers/contacts.reducer';
 
@@ -13,22 +12,20 @@ import * as fromContacts from '../../store/reducers/contacts.reducer';
     styleUrls: ['./contact-list-page.component.scss'],
 })
 export class ContactListPageComponent implements OnInit {
-    public tabs: ConfigInterface['tabs'] = config.tabs;
-    public selectedTab: string = 'All';
+
+    public isTablet = this.deviceService.isTablet();
+    public isDesktop = this.deviceService.isDesktop();
+
     public selectedContact: ContactEntity = {} as ContactEntity;
     public contacts$: Observable<UserInterface> | undefined;
 
-    constructor(private store: Store<fromContacts.AppState>) {}
+    constructor(
+        private store: Store<fromContacts.AppState>,
+        private deviceService: DeviceDetectorService
+    ) {}
 
     public ngOnInit(): void {
         this.store.dispatch(new contactsActions.LoadContacts());
         this.contacts$ = this.store.pipe(select(fromContacts.getContacts));
-    }
-
-    public onSelectTab(event: Event): void {
-        event.preventDefault();
-        if (event.target !instanceof HTMLElement) {
-            this.selectedTab = event.target.innerHTML;
-        }
     }
 }
