@@ -31,6 +31,5 @@ const contactListPageRoutes: Routes = [
     ],
     exports: [ContactListPageComponent],
     declarations: [ContactListPageComponent],
-    providers: [],
 })
 export class ContactListPageModule {}

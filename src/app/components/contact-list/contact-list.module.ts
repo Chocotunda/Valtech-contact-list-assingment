@@ -11,6 +11,5 @@ import { ContactListComponent } from './contact-list.component';
     ],
     exports: [ContactListComponent],
     declarations: [ContactListComponent],
-    providers: [],
 })
 export class ContactListModule {}

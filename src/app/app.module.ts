@@ -17,10 +17,8 @@ import { AppComponent } from './app.component';
         HttpClientModule,
         StoreModule.forRoot({}),
         EffectsModule.forRoot([]),
-        HttpClientModule,
         StoreDevtoolsModule.instrument()
     ],
-    providers: [],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

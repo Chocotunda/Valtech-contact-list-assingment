@@ -1,10 +1,12 @@
+import { NgIf } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ContactOffcanvasComponent } from './contact-offcanvas.component';
 
 @NgModule({
-    imports: [],
+    imports: [
+        NgIf,
+    ],
     exports: [ContactOffcanvasComponent],
     declarations: [ContactOffcanvasComponent],
-    providers: [],
 })
 export class ContactOffcanvasModule {}

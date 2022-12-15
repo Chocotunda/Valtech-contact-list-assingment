@@ -9,6 +9,5 @@ import { ContactCardComponent } from './contact-card.component';
     ],
     exports: [ContactCardComponent],
     declarations: [ContactCardComponent],
-    providers: [],
 })
 export class ContactCardModule {}

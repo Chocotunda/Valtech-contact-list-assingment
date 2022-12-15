@@ -9,7 +9,6 @@ import * as fromContacts from '../../store/reducers/contacts.reducer';
 @Component({
     selector: 'app-contact-list-page',
     templateUrl: './contact-list-page.component.html',
-    styleUrls: ['./contact-list-page.component.scss'],
 })
 export class ContactListPageComponent implements OnInit {
 
