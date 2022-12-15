@@ -11,8 +11,7 @@ This project is for Valtech. Valtech proposed to make this app using Angular.
 * When clicking on the close button of a card, it should disappear.
 * While a contact card is being displayed, if another contact is clicked, the first clicked contact card should disappear.
 
-### Requirements
-Structure
+### Structure
 * Feel free to use any of the latest CSS features or Sass etc. Functionality
 * The assignment has to be built using Vue or React.
 * The functionality of your assignment should use the configuration provided in the attached file.
