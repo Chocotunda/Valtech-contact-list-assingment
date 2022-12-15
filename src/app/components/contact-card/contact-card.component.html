@@ -5,10 +5,10 @@
     </div>
     <ul class="list-group list-group-flush">
     <li class="list-group-item">
-        <p class="card-text">{{selectedContact.email}}</p>
+        <p class="card-text"><a href="mailto:{{selectedContact.email}}">{{selectedContact.email}}</a></p>
     </li>
     <li class="list-group-item">
-        <p class="card-text">{{selectedContact.phone}}</p>
+        <p class="card-text"><a href="tel:{{selectedContact.phone}}">{{selectedContact.phone}}</a></p>
     </li>
     <li class="list-group-item">
         <p class="card-text">{{selectedContact.location.street.number}} {{selectedContact.location.street.name}}</p>
